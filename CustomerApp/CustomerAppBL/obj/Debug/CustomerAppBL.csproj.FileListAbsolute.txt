@@ -1,0 +1,14 @@
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppBL.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppBL.pdb
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppDAL.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppDTO.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppDAL.pdb
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppDAL.dll.config
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\CustomerAppDTO.pdb
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\obj\Debug\CustomerAppBL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\obj\Debug\CustomerAppBL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\obj\Debug\CustomerAppBL.csproj.CopyComplete
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\obj\Debug\CustomerAppBL.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppBL\obj\Debug\CustomerAppBL.pdb

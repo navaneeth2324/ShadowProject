@@ -1,0 +1,6 @@
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\bin\Debug\CustomerAppDTO.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\bin\Debug\CustomerAppDTO.pdb
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\obj\Debug\CustomerAppDTO.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\obj\Debug\CustomerAppDTO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\obj\Debug\CustomerAppDTO.dll
+C:\Users\Admin\Desktop\Genesis\ShadowProject\CustomerApp\CustomerAppDTO\obj\Debug\CustomerAppDTO.pdb

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CustomerAppModelStoreContainer" CdmEntityContainer="CustomerAppEntities">
+    <EntitySetMapping Name="LoginDBs">
+      <EntityTypeMapping TypeName="CustomerAppModel.LoginDB">
+        <MappingFragment StoreEntitySet="LoginDB">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="CustomerAppModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Sl" ColumnName="Sl" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_AddProduct" FunctionName="CustomerAppModel.Store.usp_AddProduct" />
+  </EntityContainerMapping>
+</Mapping>
