@@ -9,11 +9,14 @@ namespace CustomerAppMVC.Models
 {
     public class Product
     {
-        [DisplayName("SL NO")]
+        [DisplayName("SL No")]
+        [Required]
         public string Sl { get; set; }
         [DisplayName("Product Name")]
+        [Required]
         public string ProductName { get; set; }
         [DisplayName("Product Price")]
+        [Required]
         public int ProductPrice { get; set; }
     }
 }

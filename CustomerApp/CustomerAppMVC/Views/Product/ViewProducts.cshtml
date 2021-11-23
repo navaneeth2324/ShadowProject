@@ -3,12 +3,18 @@
 @{
     ViewBag.Title = "ProductsView";
 }
+<center>
+    <h2>Products List</h2>
+</center>
 
-<h2>Products List</h2>
+<br />
+@if (TempData["AlertMessage"]!=null)
+            {
+                <div class="alert alert-success">
+                    <strong>Success! </strong>@TempData["AlertMessage"]
+                </div>
+            }
 
-<p>
-    @Html.ActionLink("Add Product", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -35,11 +41,23 @@
             @Html.DisplayFor(modelItem => item.ProductPrice)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+            <input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Edit" onclick="location.href='@Url.Action("UpdateProduct", "Product")'" />
+            @*<input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Delete" onclick="location.href='@Url.Action("DeleteProduct", "Product")'" />*@
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
         </td>
     </tr>
 }
 
 </table>
+<center>
+    <footer>
+        <p>
+            <input type="button" class="btn btn-primary" value="Add New Product" style="background-color:indigo" onclick="location.href='@Url.Action("CreateProduct", "Product")'" />
+
+            @*@Html.ActionLink("Add New Product", "AddProduct", new { /* id=item.PrimaryKey */ })*@
+        </p>
+    </footer>
+</center>
+
