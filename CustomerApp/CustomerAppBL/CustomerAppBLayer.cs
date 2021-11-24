@@ -29,5 +29,9 @@ namespace CustomerAppBL
 
             return dalObj.EditProduct(p);
         }
+        public int DeleteProd(int sl)
+        {
+            return dalObj.DeleteProduct(sl);
+        }
     }
 }

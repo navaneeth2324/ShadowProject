@@ -11,7 +11,7 @@
 @if (TempData["AlertMessage"]!=null)
             {
                 <div class="alert alert-success">
-                    <strong>Success! </strong>@TempData["AlertMessage"]
+                    <strong> @TempData["AlertMessage"]</strong>
                 </div>
             }
 
@@ -38,14 +38,15 @@
             @Html.DisplayFor(modelItem => item.ProductName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProductPrice)
+           ₹ @Html.DisplayFor(modelItem => item.ProductPrice)
         </td>
         <td>
 
             <input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Edit" onclick="location.href='@Url.Action("UpdateProduct", "Product")'" />
-            @*<input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Delete" onclick="location.href='@Url.Action("DeleteProduct", "Product")'" />*@
-            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            @*<input type="button" class="btn btn-danger"  value="Delete" onclick="location.href='@Url.Action("Delete", "Product",new { sl = item.Sl })'" />*@
+            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@
+            @*@Html.ActionLink("Delete", "Product", new { @sl = item.Sl})*@
+            <input type="button" class="btn btn-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "Product", new { @sl=@item.Sl })'" />
         </td>
     </tr>
 }

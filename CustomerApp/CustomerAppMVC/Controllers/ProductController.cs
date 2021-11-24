@@ -3,6 +3,9 @@ using CustomerAppDTO;
 using CustomerAppMVC.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,7 +14,9 @@ namespace CustomerAppMVC.Controllers
 {
     public class ProductController : Controller
     {
+        string conStr = ConfigurationManager.ConnectionStrings["Constr"].ConnectionString;
         // GET: Product
+
         public ActionResult ViewProducts()
         {
             {
@@ -109,5 +114,23 @@ namespace CustomerAppMVC.Controllers
                 return View("Error");
             }
         }
+
+        
+    
+        public ActionResult Delete(int sl)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(conStr))
+            {
+                sqlcon.Open();
+                string query = "DELETE FROM Product where Sl=@Sl";
+                SqlCommand sqlcmd = new SqlCommand(query, sqlcon);
+                SqlParameter sqlParameter = sqlcmd.Parameters.AddWithValue("@Sl",sl);
+                sqlcmd.ExecuteNonQuery();
+                TempData["AlertMessage"] = "Product Deleted successfully!!";
+            }
+            return RedirectToAction("ViewProducts");
+        }
+
+      
     }
 }

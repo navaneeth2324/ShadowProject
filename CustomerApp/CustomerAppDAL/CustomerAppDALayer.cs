@@ -109,5 +109,33 @@ namespace CustomerAppDAL
             catch (Exception e) { throw e; }
             finally { conObj.Close(); }
         }
+
+        public int DeleteProduct(int sl)
+        {
+            SqlConnection conObj = new SqlConnection();
+            conObj.ConnectionString = conStr;
+            try
+            {
+                SqlCommand queryobj = new SqlCommand();
+                queryobj.CommandText = @"usp_DeleteProduct";
+                queryobj.CommandType = System.Data.CommandType.StoredProcedure;
+                queryobj.Connection = conObj;
+                SqlParameter preturn = new SqlParameter();
+                preturn.ParameterName = "@sl";
+                preturn.Value = sl;
+                preturn.Direction = System.Data.ParameterDirection.ReturnValue;
+                preturn.SqlDbType = SqlDbType.Int;
+                queryobj.Parameters.Add(preturn);
+
+                conObj.Open();
+                queryobj.ExecuteNonQuery();
+
+                return Convert.ToInt32(preturn.Value);
+            }
+
+
+            catch (Exception e) { throw e; }
+            finally { conObj.Close(); }
+        }
     }
 }
