@@ -5,7 +5,13 @@
 }
 @if (Session["username"] != null)
 {
-    <input type="button" class="btn btn-primary"  value="Logout" style="float:right !important"  onclick="location.href='@Url.Action("Logout", "UserLogin")'" />
+
+    <input type="button" class="btn btn-primary" value="Logout" style="float:right !important" onclick="location.href='@Url.Action("Logout", "UserLogin")'" />
+    
+    <p style="color: cadetblue; float: left !important;margin-top:15px;">Hello <strong>@Session["username"]</strong></p>
+
+
+
     <center>
         <h2><strong>Products List</strong></h2>
     </center>

@@ -5,7 +5,12 @@
 }
 @if (Session["username"] != null)
 {
-    <input type="button" class="btn btn-primary" value="Logout" style="float:right !important" onclick="location.href='@Url.Action("Logout", "UserLogin")'" />
+    
+    
+        <input type="button" class="btn btn-primary" value="Logout" style="float:right !important" onclick="location.href='@Url.Action("Logout", "UserLogin")'" />
+        
+    
+
     <h2>Add Product</h2>
     using (Html.BeginForm("AddProduct", "Product"))
     {
