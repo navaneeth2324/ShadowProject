@@ -3,62 +3,73 @@
 @{
     ViewBag.Title = "ProductsView";
 }
-<center>
-    <h2>Products List</h2>
-</center>
+@if (Session["username"] != null)
+{
+    <input type="button" class="btn btn-primary"  value="Logout" style="float:right !important"  onclick="location.href='@Url.Action("Logout", "UserLogin")'" />
+    <center>
+        <h2><strong>Products List</strong></h2>
+    </center>
 
-<br />
-@if (TempData["AlertMessage"]!=null)
-            {
-                <div class="alert alert-success">
-                    <strong> @TempData["AlertMessage"]</strong>
-                </div>
-            }
+    <br />
+    if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <strong> @TempData["AlertMessage"]</strong>
+        </div>
+    }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Sl)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductPrice)
-        </th>
-        <th></th>
-    </tr>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                Actions
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-           ₹ @Html.DisplayFor(modelItem => item.ProductPrice)
-        </td>
-        <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    ₹ @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
 
-            <input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Edit" onclick="location.href='@Url.Action("UpdateProduct", "Product")'" />
-            @*<input type="button" class="btn btn-danger"  value="Delete" onclick="location.href='@Url.Action("Delete", "Product",new { sl = item.Sl })'" />*@
-            @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@
-            @*@Html.ActionLink("Delete", "Product", new { @sl = item.Sl})*@
-            <input type="button" class="btn btn-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "Product", new { @sl=@item.Sl })'" />
-        </td>
-    </tr>
+                    <input type="button" class="btn btn-primary" style="background-color:darkgoldenrod" value="Edit" onclick="location.href='@Url.Action("UpdateProduct", "Product")'" />
+                    @*<input type="button" class="btn btn-danger"  value="Delete" onclick="location.href='@Url.Action("Delete", "Product",new { sl = item.Sl })'" />*@
+                    @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })*@
+                    @*@Html.ActionLink("Delete", "Product", new { @sl = item.Sl})*@
+                    <input type="button" class="btn btn-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "Product", new { @sl=@item.Sl })'" />
+                </td>
+            </tr>
+        }
+
+    </table>
+    <center>
+        <footer>
+            <p>
+                <input type="button" class="btn btn-primary" value="Add Product" style="background-color:indigo" onclick="location.href='@Url.Action("CreateProduct", "Product")'" />
+
+
+
+                @*@Html.ActionLink("Add New Product", "AddProduct", new { /* id=item.PrimaryKey */ })*@
+            </p>
+        </footer>
+    </center>
+
+
 }
-
-</table>
-<center>
-    <footer>
-        <p>
-            <input type="button" class="btn btn-primary" value="Add New Product" style="background-color:indigo" onclick="location.href='@Url.Action("CreateProduct", "Product")'" />
-
-            @*@Html.ActionLink("Add New Product", "AddProduct", new { /* id=item.PrimaryKey */ })*@
-        </p>
-    </footer>
-</center>
-
